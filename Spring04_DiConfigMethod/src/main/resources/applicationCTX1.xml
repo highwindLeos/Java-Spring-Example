@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student1" class="com.tj.method1.Student" >
+		<constructor-arg value="이데이" />
+		<constructor-arg value="30" />
+		<constructor-arg>
+			<list>
+				<value>공기놀이</value>
+				<value>태권도</value>
+				<value>바느질</value>
+			</list>
+		</constructor-arg>
+		<property name="height" value="100" />
+		<property name="weight" value="75" />
+	</bean>
+ 	<bean id="studentInfo" class="com.tj.method1.StudentInfo">
+ 		<property name="student" ref="student1" />
+	</bean>
+	
+</beans>
